@@ -1,6 +1,6 @@
 <img align="right" height="128" src=".meow/sqsh.svg">
 
-# squish ![]("https://nukocities.neocities.org/nuko/sets/cat325.gif")
+# squish ![](https://nukocities.neocities.org/nuko/sets/cat325.gif)
 
 squish is a lightweight shell made in Racket which at the moment is still in beta!
 
