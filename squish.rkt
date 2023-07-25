@@ -2,6 +2,7 @@
 
 (require racket/system)
 
+(system "rlwrap -n squish")
 (system "clear")
 
 (define (squish)
