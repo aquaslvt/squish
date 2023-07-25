@@ -17,7 +17,7 @@ git clone https://github.com/mkukiro/squish
 To run the executable, make sure you have `rlwrap` installed, and after that, you can run squish by simply typing this:
 
 ```bash
-rlwrap ./squish
+rlwrap -n ./squish
 ```
 
 <sub>About exiting squish, at the moment the only way is pressing `Ctrl + C`<sub>
