@@ -10,14 +10,12 @@ For now squish is a standalone executable (it will later be available in some pa
 
 ```bash
 git clone https://github.com/mkukiro/squish
+cd squish
+sudo install squish /usr/bin
 ```
 
 ### Usage
+> **Note**
+> There is currently no way to `cd` in squish yet
 
-To run the executable, make sure you have `rlwrap` installed, and after that, you can run squish by simply typing this:
-
-```bash
-rlwrap -n ./squish
-```
-
-<sub>About exiting squish, at the moment the only way is pressing `Ctrl + C`<sub>
+To run squish, make sure you have `rlwrap` installed, and after that, you can run squish anywhere by simply typing running `squish`
