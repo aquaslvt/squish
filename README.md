@@ -18,4 +18,4 @@ sudo install squish /usr/bin
 > **Note**
 > There is currently no way to `cd` in squish yet
 
-To run squish, make sure you have `rlwrap` installed, and after that, you can run squish anywhere by simply typing running `squish`
+To run squish, make sure you have `rlwrap` installed, and after that, you can run squish anywhere by simply typing running `rlwrap -nsquish`
