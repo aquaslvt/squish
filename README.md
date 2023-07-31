@@ -29,4 +29,4 @@ Replace `doas` with `sudo` if you don't have it
 > **Note**
 > There is currently no way to `cd` in squish yet
 
-To run squish, make sure you have `rlwrap` installed, and after that, you can run squish anywhere by simply typing running `rlwrap -nsquish`
+To run squish, make sure you have `rlwrap` installed, and after that, you can run squish anywhere by simply typing running `rlwrap -n squish`
