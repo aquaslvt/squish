@@ -2,7 +2,7 @@
 
 # squish ![](https://nukocities.neocities.org/nuko/sets/cat325.gif)
 
-squish is a lightweight shell* made in Racket which at the moment is still in beta!
+squish is a lightweight shell made in Racket which at the moment is still in beta!
 
 ### Installation
 
