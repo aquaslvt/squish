@@ -9,8 +9,8 @@ fi
 
 # Step 1
 
-touch ~/.squishrc
-echo -e "\033[34m~>\033[0m .squishrc created in home directory"
+touch ~/.config/squish/.squishrc
+echo -e "\033[34m~>\033[0m .squishrc created in .config"
 
 # Step 2
 
@@ -33,5 +33,5 @@ rm install.sh
 
 # End
 
-echo -e "\033[32m<~\033[0m Installation comlpeted!"
+echo -e "\033[32m<~\033[0m Installation completed!"
 exit 0
