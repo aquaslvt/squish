@@ -5,7 +5,8 @@
 (system "clear")
 
 (define (squish)
-  (display "\033[33mλ \033[0m")
+  (printf "┌ \033[36m~a\033[0m\n" (current-directory))
+  (display "└ \033[33mλ \033[0m")
   (flush-output)
   (displayln (system (read-line)))
   (squish))
