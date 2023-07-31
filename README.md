@@ -3,6 +3,9 @@
 # squish ![](https://nukocities.neocities.org/nuko/sets/cat325.gif)
 
 squish is a lightweight shell entirely made in Racket which at the moment, is still in beta!
+<h3 align="center">
+ <img align="center" height="256" src=".meow/screenshot.png">
+<h3>
 
 ## Installation
 
