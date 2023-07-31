@@ -6,12 +6,17 @@ squish is a lightweight shell made in Racket which at the moment is still in bet
 
 ### Installation
 
-For now you can clone the repo and install it into `/usr/bin` using `install`
+For now, you can use the installation script. First, clone the repo:
 
 ```bash
 git clone https://github.com/mkukiro/squish
+```
+
+And now you can run the installation script
+
+```bash
 cd squish
-sudo install squish /usr/bin
+./install.sh
 ```
 
 ### Usage
