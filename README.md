@@ -2,22 +2,37 @@
 
 # squish ![](https://nukocities.neocities.org/nuko/sets/cat325.gif)
 
-squish is a lightweight shell made in Racket which at the moment is still in beta!
+squish is a lightweight shell entirely made in Racket which at the moment, is still in beta!
 
 ### Installation
 
-For now, you can use the installation script. First, clone the repo:
+#### Script
+
+You can run the installation script to install squish! First, clone the repo
 
 ```bash
 git clone https://github.com/mkukiro/squish
 ```
 
-And now you can run the installation script
+And now you can run the installation script (requires root previledges!)
 
 ```bash
 cd squish
 ./install.sh
 ```
+
+#### Manual
+
+You could also manually install squish
+
+```bash
+git clone https://github.com/mkukiro/squish
+touch ~/.config/squish/.squishrc
+cd squish
+doas install squish /usr/bin
+```
+
+Replace `doas` with `sudo` if you don't have it
 
 ### Usage
 > **Note**
