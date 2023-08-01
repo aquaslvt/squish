@@ -21,7 +21,7 @@ cd squish
 
 ```bash
 git clone https://github.com/mkukiro/squish
-touch ~/.config/squish/.squishrc
+touch ~/.config/squish/config.toml
 cd squish
 doas install squish /usr/bin
 ```
