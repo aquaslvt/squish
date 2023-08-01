@@ -9,7 +9,7 @@ fi
 
 # Step 1
 
-touch ~/.config/squish/.squishrc
+touch ~/.config/squish/config.toml
 echo -e "\033[34m~>\033[0m .squishrc created in .config"
 
 # Step 2
