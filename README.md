@@ -9,14 +9,6 @@ squish is a lightweight shell entirely made in Racket which at the moment, is st
 
 ## Installation
 
-### Script
-
-```bash
-git clone https://github.com/mkukiro/squish
-cd squish
-./install.sh
-```
-
 ### Manual
 
 ```bash
@@ -24,6 +16,16 @@ git clone https://github.com/mkukiro/squish
 touch ~/.config/squish/config.toml
 cd squish
 doas install squish /usr/bin
+```
+
+### Script
+> **Warning**
+> The installation script doesn't always work and will probably be discontinued soon
+
+```bash
+git clone https://github.com/mkukiro/squish
+cd squish
+./install.sh
 ```
 
 Replace `doas` with `sudo` if you don't have it
