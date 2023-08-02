@@ -18,7 +18,7 @@ echo -e "\033[34m~>\033[0m .squishrc created in .config"
 
 # Step 2
 
-echo -e "\033[34m->\033[0m In what directory do you want to install fish in? 1. /usr/bin 2. /usr/local/bin"
+echo -ne "\033[34m->\033[0m In what directory do you want to install fish in? 1. /usr/bin 2. /usr/local/bin \033[34m>\033[0m "
 read x
 echo -e "\033[34m~>\033[0m Installing squish..."
 
