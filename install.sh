@@ -7,6 +7,10 @@ if [[ $EUID -ne 0 ]]; then
     exit 1
 fi
 
+# Warning
+
+echo -e "\033[31m!\033[0m The installation script doesn't always work and will probably be discontinued soon\n"
+
 # Step 1
 
 touch ~/.config/squish/config.toml
