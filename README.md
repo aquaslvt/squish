@@ -24,7 +24,7 @@ doas install squish /usr/bin
 ```
 
 Replace `doas` with `sudo` if you don't have it
-
+1
 ## Usage
 
 > **Note**
