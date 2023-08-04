@@ -1,4 +1,7 @@
-#lang racket
+#lang racket/base
+
+(require racket/string
+         racket/system)
 
 (provide squish-run)
 
