@@ -1,7 +1,8 @@
 #lang racket/base
 
 (require racket/string
-         racket/system)
+         racket/system
+         racket/list)
 
 (provide squish-run)
 
@@ -12,9 +13,10 @@
           (current-directory (substring command 3))
           (displayln "Directory not found")))
     
-    ((string-contains? command " & ")
-      (system (substring command 0 2))
-      (system (substring command 5)))
+    ((string-contains? command "&")
+      (define parts (regexp-split #px"&" command))
+      (system (first parts))
+      (system (second parts)))
 
     ((equal? command "exit") (exit))
     (else (system command))))
