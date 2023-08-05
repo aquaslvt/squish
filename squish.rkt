@@ -6,12 +6,16 @@
 
 (provide squish-run)
 
+(define (squish-error message)
+  (printf "\033[31m!\033[30m ~a\033[0m" message)
+  (newline))
+
 (define (squish-run command)
   (cond
     ((string-contains? command "cd ")
       (if (directory-exists? (substring command 3))
           (current-directory (substring command 3))
-          (displayln "Directory not found")))
+          (squish-error "Directory not found")))
     
     ((string-contains? command "&")
       (define parts (regexp-split #px"&" command))
