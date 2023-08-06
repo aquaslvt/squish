@@ -12,7 +12,7 @@
 
 (define (squish-run command)
   (cond
-    ((string-contains? command "cd ")
+    ((regexp-match? #px"~> |cd " command)
       (if (directory-exists? (substring command 3))
           (current-directory (substring command 3))
           (squish-error "Directory not found")))
