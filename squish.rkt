@@ -20,7 +20,12 @@
     ((string-contains? command "&")
       (define parts (regexp-split #px"&" command))
       (system (first parts))
-      (system (second parts)))
+      (system (last parts)))
+
+    ((string-contains? command "->")
+      (define parts (regexp-split #px"->" command))
+      (system (string-append "mv " (first parts) " " (last parts))))
+
 
     ((equal? command "exit") (exit))
     (else (system command))))
