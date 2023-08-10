@@ -13,19 +13,18 @@
 (define (squish-run command)
   (cond
     ((regexp-match? #px"~> |cd " command)
-      (if (directory-exists? (substring command 3))
-          (current-directory (substring command 3))
-          (squish-error "Directory not found")))
-    
+     (if (directory-exists? (substring command 3))
+         (current-directory (substring command 3))
+         (squish-error "Directory not found")))
+
     ((string-contains? command "&")
-      (define parts (regexp-split #px"&" command))
-      (system (first parts))
-      (system (last parts)))
+     (define parts (regexp-split #px"&" command))
+     (system (first parts))
+     (system (last parts)))
 
     ((string-contains? command "->")
-      (define parts (regexp-split #px"->" command))
-      (system (string-append "mv " (first parts) " " (last parts))))
-
+     (define parts (regexp-split #px"->" command))
+     (system (string-append "mv " (first parts) " " (last parts))))
 
     ((equal? command "exit") (exit))
     (else (system command))))
