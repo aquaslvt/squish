@@ -3,9 +3,9 @@ cursor             = 'λ'
 color              = 'yellow'
 error_color        = 'red'
 repl_color         = 'purple'
-# top_line_order   = 'username@hostname cwd'
+# top_line_order   = '$username@$hostname $cwd'
 cwd_label_prettify = ['''/home/[^/]+''', '~']
-extra_symbol       = '☯'
+extra_symbols      = ['☯'] # Squish Randomly picks one of those each time
 show_exit_code     = false
 
 [autocomplete]
