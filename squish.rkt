@@ -2,7 +2,8 @@
 
 (require racket/string
          racket/system
-         racket/list)
+         racket/list
+         shlex)
 
 (provide squish-run)
 
@@ -11,7 +12,7 @@
   (newline))
 
 (define (system-run command)
-  (define parts (string-split command " "))
+  (define parts (split command))
   (let ((executable-path (find-executable-path (car parts))))
     (when executable-path
       (apply system* executable-path (cdr parts)))))
