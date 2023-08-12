@@ -10,6 +10,12 @@
   (eprintf "\033[31m!\033[30m ~a\033[0m" message)
   (newline))
 
+(define (system-run command)
+  (define parts (string-split command " "))
+  (let ((executable-path (find-executable-path (car parts))))
+    (when executable-path
+      (apply system* executable-path (cdr parts)))))
+
 (define (squish-run command)
   (cond
     ((regexp-match? #px"~> |cd " command)
@@ -19,12 +25,12 @@
 
     ((string-contains? command "&")
      (define parts (regexp-split #px"&" command))
-     (system (first parts))
-     (system (last parts)))
+     (system-run (first parts))
+     (system-run (last parts)))
 
     ((string-contains? command "->")
      (define parts (regexp-split #px"->" command))
-     (system (string-append "mv " (first parts) " " (last parts))))
+     (system-run (string-append "mv " (first parts) " " (last parts))))
 
     ((equal? command "exit") (exit))
-    (else (system command))))
+    (else (system-run command))))
