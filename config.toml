@@ -1,11 +1,12 @@
 [prompt]
-cursor         = 'λ'
-color          = 'yellow'
-error_color    = 'red'
-repl_color     = 'purple'
-# top_line_order = 'username@hostname cwd'
-extra_symbol   = '☯'
-show_exit_code = false
+cursor             = 'λ'
+color              = 'yellow'
+error_color        = 'red'
+repl_color         = 'purple'
+# top_line_order   = 'username@hostname cwd'
+directory_prettify = ['''/home/[^/]+''', '~']
+extra_symbol       = '☯'
+show_exit_code     = false
 
 [autocomplete]
 autocomplete    = true
