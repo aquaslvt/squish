@@ -1,0 +1,14 @@
+[prompt]
+cursor         = 'λ'
+color          = 'yellow'
+error_color    = 'red'
+repl_color     = 'purple'
+# top_line_order = 'username@hostname cwd'
+extra_symbol   = '☯'
+show_exit_code = false
+
+[autocomplete]
+autocomplete    = true
+tab_menu        = true
+command_color   = 'purple'
+arguments_color = 'yellow'
