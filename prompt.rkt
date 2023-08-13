@@ -2,11 +2,14 @@
 
 (require "squish.rkt"
          toml
-         racket/file)
+         racket/file
+         threading)
 
 (define (config-ref section value)
-    (hash-ref (hash-ref (parse-toml (file->string "config.toml")) (string->symbol section)) (string->symbol value)))
-    ;; Is gonna get last-threaded soon
+  (hash-ref (~> "config.toml"
+            file->string
+            parse-toml
+            (hash-ref (string->symbol section))) (string->symbol value)))
 
 (define (prompt)
   (printf "┌ \033[35m~a\033[0m@\033[35m~a\033[0m \033[32m~a\033[0m ~a\n" 
