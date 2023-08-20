@@ -12,12 +12,13 @@
   (newline))
 
 (define (system-run command)
-  (define parts (split command))
-  (let ((executable-path (find-executable-path (car parts))))
-    (when executable-path
-      (apply system* executable-path (cdr parts)))
-    (unless executable-path
-      (squish-error "Unknown command"))))
+  (when (not (regexp-match? #px"^\\s*$" command))
+    (define parts (split command))
+    (let ((executable-path (find-executable-path (car parts))))
+      (when executable-path
+        (apply system* executable-path (cdr parts)))
+      (unless executable-path
+        (squish-error "Unknown command")))))
 
 (define (squish-run command)
   (cond
