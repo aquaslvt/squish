@@ -1,6 +1,6 @@
 [prompt]
 cursor             = 'λ'
-color              = 'yellow'
+default_color      = 'yellow'
 error_color        = 'red'
 repl_color         = 'purple'
 # top_line_order   = '$username@$hostname $cwd'
