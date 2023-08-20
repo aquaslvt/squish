@@ -11,6 +11,10 @@
   (eprintf "\033[31m!\033[30m\033[2m ~a\033[0m" message)
   (newline))
 
+(define (squish-tip message)
+  (eprintf "\033[34m?\033[30m\033[2m ~a\033[0m" message)
+  (newline))
+
 (define (system-run command)
   (when (not (regexp-match? #px"^\\s*$" command))
     (define parts (split command))
