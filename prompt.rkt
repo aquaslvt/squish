@@ -14,7 +14,7 @@
 (define (prompt)
   (printf "┌ \033[35m~a\033[0m@\033[35m~a\033[0m \033[32m~a\033[0m ~a\n" 
     (getenv "USER")
-    (getenv "HOSTNAME") 
+    (or (getenv "HOSTNAME") "sqsh")
     (regexp-replace #rx"/home/[^/]+" (path->string (current-directory)) "~")
     (config-ref "prompt" "extra_symbols"))
   
