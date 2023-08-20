@@ -1,8 +1,8 @@
 #lang racket/base
 
 (require "squish.rkt"
-         toml
          racket/file
+         toml
          threading)
 
 (define (config-ref section value)
