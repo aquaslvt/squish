@@ -8,7 +8,7 @@
 (provide squish-run)
 
 (define (squish-error message)
-  (eprintf "\033[31m!\033[30m ~a\033[0m" message)
+  (eprintf "\033[31m!\033[30m\033[2m ~a\033[0m" message)
   (newline))
 
 (define (system-run command)
